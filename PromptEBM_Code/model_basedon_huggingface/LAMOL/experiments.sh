@@ -1,0 +1,12 @@
+nohup bash run.sh 0 ./data ./models pn_calibration sst,srl,woz.en openai-gpt >& train_pn_calib_sst_srl_woz_openai-gpt.nohup &
+nohup bash run.sh 0 ./data ./models pn_calibration sst,woz.en,srl openai-gpt >& train_pn_calib_sst_woz_srl_openai-gpt.nohup &
+nohup bash run.sh 0 ./data ./models pn_calibration srl,sst,woz.en openai-gpt >& train_pn_calib_srl_sst_woz_openai-gpt.nohup &
+nohup bash run.sh 0 ./data ./models pn_calibration srl,woz.en,sst openai-gpt >& train_pn_calib_srl_woz_sst_openai-gpt.nohup &
+nohup bash run.sh 0 ./data ./models pn_calibration woz.en,sst,srl openai-gpt >& train_pn_calib_woz_sst_srl_openai-gpt.nohup &
+nohup bash run.sh 0 ./data ./models pn_calibration woz.en,srl,sst openai-gpt >& train_pn_calib_woz_srl_sst_openai-gpt.nohup &
+nohup bash run.sh 1 ./data ./models pn_calibration sst,srl,woz.en gpt2 >& train_pn_calib_sst_srl_woz_gpt2.nohup &
+nohup bash run.sh 1 ./data ./models pn_calibration sst,woz.en,srl gpt2 >& train_pn_calib_sst_woz_srl_gpt2.nohup &
+nohup bash run.sh 1 ./data ./models pn_calibration srl,sst,woz.en gpt2 >& train_pn_calib_srl_sst_woz_gpt2.nohup &
+nohup bash run.sh 1 ./data ./models pn_calibration srl,woz.en,sst gpt2 >& train_pn_calib_srl_woz_sst_gpt2.nohup &
+nohup bash run.sh 1 ./data ./models pn_calibration woz.en,sst,srl gpt2 >& train_pn_calib_woz_sst_srl_gpt2.nohup &
+nohup bash run.sh 1 ./data ./models pn_calibration woz.en,srl,sst gpt2 >& train_pn_calib_woz_srl_sst_gpt2.nohup &

@@ -1,0 +1,2 @@
+export PYTHONPATH=../../../:../../:../:`pwd`/:$PYTHONPATH
+python text_generation_from_pretrained.py  --forward_only False --data_dir ./data --model_dir ./ebm_models --tasks sst srl woz.en --ebm_data lamol --gpu_idx 0 --model_name openai-gpt --max_vocab_cnt 40484

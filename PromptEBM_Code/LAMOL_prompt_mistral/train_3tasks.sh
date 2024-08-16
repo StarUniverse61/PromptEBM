@@ -1,0 +1,2 @@
+export PYTHONPATH=:../:../:../:../:../:../:`pwd`/:$PYTHONPATH
+nohup python train.py  --data_dir /home/xiaodi/NLP/LAMOL/data  --model_dir_root /home/xiaodi/NLP/Lifelonglearning-main/Lifelonglearning_For_NLG_v3/LAMOL_prompt_mistral/model --model_name mistralai/Mistral-7B-v0.1 --seq_train_type ebm --tasks woz.en srl sst --ebm_data lamol --max_vocab_cnt 32000 --latent_size 80 --max_utt_len 80 --max_dec_len 80 --gen_lm_sample_percentage 0 >train_3tasks_prompt_mistral_0_order6.nohup &

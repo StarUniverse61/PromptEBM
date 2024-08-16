@@ -1,0 +1,77 @@
+ssh://dingcheng@172.19.55.33:22/home/dingcheng/dingcheng_env_fairseq_lll_v3/bin/python -u /data/dingcheng/workspace/baidu/ccl/Lifelonglearning_For_NLG_v3/model_basedon_huggingface/LAMOL/test_pn_calibration.py --data_dir ./data --model_dir_root ./models --seq_train_type pn_calibration --tasks sst srl woz.en
+Not all gpus support fp16 training! Will use fp32 instead.
+2022-02-03 22:13:05,077 - 0:00:06 - 0.0s - INFO - __main__ - args = Namespace(adam_epsilon=0.0001, add_task_tokens=False, data_dir='./data', debug=False, decay_style='linear', device_ids=[1], dynamic_epochs=False, fp32=False, gen_lm_sample_percentage=0.05, learning_rate=6.25e-05, lm_lambda=0.25, logging_steps=1000, lr_schedule='warmup_linear', max_grad_norm=1, max_len=1024, max_n_epochs=9, memory_sizes=[40536.0], min_batch_size=4, min_n_steps=1500, model_dir_root='./models/gpt2/pn_calibration/sst_srl_woz.en', model_name='gpt2', n_gpus=1, n_train_epochs={'sst': 3, 'srl': 3, 'woz.en': 3}, n_warmup_ratio=0.005, n_workers=4, qp_margin=0.5, real_sample=False, recadam_anneal_fun='sigmoid', recadam_anneal_k=0.5, recadam_anneal_t0=1000, recadam_anneal_w=1.0, recadam_pretrain_cof=5000.0, reg_lambda=1.0, seed=42, seq_train_type='pn_calibration', skip_tasks=None, tasks=['sst', 'srl', 'woz.en'], temperature_lm=1.0, temperature_qa=1.0, test_batch_size=[14187], tokens_weight=5, top_k_lm=20, top_k_qa=20, top_p_lm=0.0, top_p_qa=0.0, train_batch_size=[14187], unbound=0, use_sep=False, weight_decay=0.01)
+2022-02-03 22:13:14,283 - 0:00:15 - 9.2s - INFO - __main__ - task: sst, epoch: 1
+2022-02-03 22:13:14,283 - 0:00:15 - 0.0s - INFO - __main__ - start to test { task: sst (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:13:14,886 - 0:00:16 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:13:15,817 - 0:00:17 - 0.9s - INFO - __main__ - start to test { task: sst (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:13:16,294 - 0:00:17 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:13:20,561 - 0:00:21 - 4.3s - INFO - __main__ - start to test { task: sst (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:13:21,159 - 0:00:22 - 0.6s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:13:22,786 - 0:00:24 - 1.6s - INFO - __main__ - score: {'sst': OrderedDict([('em', 87.69906644700714), ('nf1', 87.69906644700714), ('nem', 87.69906644700714)]), 'srl': OrderedDict([('em', 0.0), ('nf1', 0.09108026396818573), ('nem', 0.0)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 0.0), ('nem', 0.0), ('joint_goal_em', 0.0), ('turn_request_em', 32.32077764277035), ('turn_goal_em', 52.308626974483595), ('avg_dialogue', 16.160388821385176)])}
+2022-02-03 22:13:25,962 - 0:00:27 - 3.2s - INFO - __main__ - task: sst, epoch: 2
+2022-02-03 22:13:25,962 - 0:00:27 - 0.0s - INFO - __main__ - start to test { task: sst (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:13:26,522 - 0:00:27 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:13:27,479 - 0:00:28 - 1.0s - INFO - __main__ - start to test { task: sst (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:13:27,986 - 0:00:29 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:13:30,960 - 0:00:32 - 3.0s - INFO - __main__ - start to test { task: sst (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:13:31,417 - 0:00:32 - 0.5s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:13:32,989 - 0:00:34 - 1.6s - INFO - __main__ - score: {'sst': OrderedDict([('em', 90.33498077979132), ('nf1', 90.33498077979132), ('nem', 90.33498077979132)]), 'srl': OrderedDict([('em', 0.0), ('nf1', 0.021369492184193636), ('nem', 0.0)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 0.0), ('nem', 0.0), ('joint_goal_em', 0.0), ('turn_request_em', 32.32077764277035), ('turn_goal_em', 52.308626974483595), ('avg_dialogue', 16.160388821385176)])}
+2022-02-03 22:13:36,104 - 0:00:37 - 3.1s - INFO - __main__ - task: sst, epoch: 3
+2022-02-03 22:13:36,104 - 0:00:37 - 0.0s - INFO - __main__ - start to test { task: sst (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:13:36,657 - 0:00:37 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:13:37,831 - 0:00:39 - 1.2s - INFO - __main__ - start to test { task: sst (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:13:38,323 - 0:00:39 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:13:41,023 - 0:00:42 - 2.7s - INFO - __main__ - start to test { task: sst (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:13:41,470 - 0:00:42 - 0.4s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:13:43,094 - 0:00:44 - 1.6s - INFO - __main__ - score: {'sst': OrderedDict([('em', 90.77429983525536), ('nf1', 90.77429983525536), ('nem', 90.77429983525536)]), 'srl': OrderedDict([('em', 0.0), ('nf1', 0.021635187468899416), ('nem', 0.0)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 0.0), ('nem', 0.0), ('joint_goal_em', 0.0), ('turn_request_em', 32.32077764277035), ('turn_goal_em', 52.308626974483595), ('avg_dialogue', 16.160388821385176)])}
+2022-02-03 22:13:46,103 - 0:00:47 - 3.0s - INFO - __main__ - task: srl, epoch: 1
+2022-02-03 22:13:46,103 - 0:00:47 - 0.0s - INFO - __main__ - start to test { task: srl (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:13:46,669 - 0:00:47 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:13:47,595 - 0:00:48 - 0.9s - INFO - __main__ - start to test { task: srl (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:13:48,073 - 0:00:49 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:13:54,017 - 0:00:55 - 5.9s - INFO - __main__ - start to test { task: srl (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:13:54,493 - 0:00:55 - 0.5s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:13:57,461 - 0:00:58 - 3.0s - INFO - __main__ - score: {'sst': OrderedDict([('em', 57.55079626578803), ('nf1', 57.55079626578803), ('nem', 57.55079626578803)]), 'srl': OrderedDict([('em', 33.43934575193094), ('nf1', 55.419143027679894), ('nem', 38.52794184461608)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 17.103995465507964), ('nem', 1.275820170109356), ('joint_goal_em', 0.0), ('turn_request_em', 32.32077764277035), ('turn_goal_em', 52.308626974483595), ('avg_dialogue', 16.160388821385176)])}
+2022-02-03 22:14:00,607 - 0:01:01 - 3.1s - INFO - __main__ - task: srl, epoch: 2
+2022-02-03 22:14:00,607 - 0:01:01 - 0.0s - INFO - __main__ - start to test { task: srl (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:14:01,167 - 0:01:02 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:14:02,149 - 0:01:03 - 1.0s - INFO - __main__ - start to test { task: srl (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:14:02,786 - 0:01:04 - 0.6s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:14:08,861 - 0:01:10 - 6.1s - INFO - __main__ - start to test { task: srl (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:14:09,335 - 0:01:10 - 0.5s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:14:12,151 - 0:01:13 - 2.8s - INFO - __main__ - score: {'sst': OrderedDict([('em', 58.099945085118065), ('nf1', 58.099945085118065), ('nem', 58.099945085118065)]), 'srl': OrderedDict([('em', 41.16310767832803), ('nf1', 64.27641141383633), ('nem', 47.79645615629259)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 19.970418704670827), ('nem', 1.761846901579587), ('joint_goal_em', 0.0), ('turn_request_em', 32.32077764277035), ('turn_goal_em', 52.308626974483595), ('avg_dialogue', 16.160388821385176)])}
+2022-02-03 22:14:15,468 - 0:01:16 - 3.3s - INFO - __main__ - task: srl, epoch: 3
+2022-02-03 22:14:15,468 - 0:01:16 - 0.0s - INFO - __main__ - start to test { task: srl (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:14:16,029 - 0:01:17 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:14:16,948 - 0:01:18 - 0.9s - INFO - __main__ - start to test { task: srl (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:14:17,425 - 0:01:18 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:14:23,788 - 0:01:25 - 6.4s - INFO - __main__ - start to test { task: srl (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:14:24,321 - 0:01:25 - 0.5s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:14:27,711 - 0:01:28 - 3.4s - INFO - __main__ - score: {'sst': OrderedDict([('em', 46.45799011532125), ('nf1', 46.45799011532125), ('nem', 46.45799011532125)]), 'srl': OrderedDict([('em', 44.07087687414811), ('nf1', 66.66478967602383), ('nem', 51.0222626079055)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 21.629090776235195), ('nem', 2.0048602673147022), ('joint_goal_em', 0.0), ('turn_request_em', 32.32077764277035), ('turn_goal_em', 52.308626974483595), ('avg_dialogue', 16.160388821385176)])}
+2022-02-03 22:14:30,899 - 0:01:32 - 3.2s - INFO - __main__ - task: woz.en, epoch: 1
+2022-02-03 22:14:30,899 - 0:01:32 - 0.0s - INFO - __main__ - start to test { task: woz.en (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:14:31,445 - 0:01:32 - 0.5s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:14:32,375 - 0:01:33 - 0.9s - INFO - __main__ - start to test { task: woz.en (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:14:32,954 - 0:01:34 - 0.6s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:14:40,153 - 0:01:41 - 7.2s - INFO - __main__ - start to test { task: woz.en (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:14:40,610 - 0:01:41 - 0.5s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:14:44,089 - 0:01:45 - 3.5s - INFO - __main__ - score: {'sst': OrderedDict([('em', 33.44316309719934), ('nf1', 33.44316309719934), ('nem', 33.44316309719934)]), 'srl': OrderedDict([('em', 21.035892776010904), ('nf1', 47.476699603100684), ('nem', 26.39709223080418)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 86.36131352109486), ('nem', 69.07654921020657), ('joint_goal_em', 48.359659781287974), ('turn_request_em', 85.11543134872419), ('turn_goal_em', 75.5771567436209), ('avg_dialogue', 66.73754556500609)])}
+2022-02-03 22:14:47,292 - 0:01:48 - 3.2s - INFO - __main__ - task: woz.en, epoch: 2
+2022-02-03 22:14:47,293 - 0:01:48 - 0.0s - INFO - __main__ - start to test { task: woz.en (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:14:47,904 - 0:01:49 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:14:48,908 - 0:01:50 - 1.0s - INFO - __main__ - start to test { task: woz.en (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:14:49,407 - 0:01:50 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:14:55,875 - 0:01:57 - 6.5s - INFO - __main__ - start to test { task: woz.en (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:14:56,514 - 0:01:57 - 0.6s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:14:59,780 - 0:02:01 - 3.3s - INFO - __main__ - score: {'sst': OrderedDict([('em', 8.951125755079627), ('nf1', 8.951125755079627), ('nem', 8.951125755079627)]), 'srl': OrderedDict([('em', 16.401635620172648), ('nf1', 40.76921863916665), ('nem', 21.490231712857792)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 90.78407248212838), ('nem', 78.85783718104496), ('joint_goal_em', 68.52976913730255), ('turn_request_em', 89.73268529769138), ('turn_goal_em', 84.26488456865128), ('avg_dialogue', 79.13122721749696)])}
+2022-02-03 22:15:02,848 - 0:02:04 - 3.1s - INFO - __main__ - task: woz.en, epoch: 3
+2022-02-03 22:15:02,849 - 0:02:04 - 0.0s - INFO - __main__ - start to test { task: woz.en (load) sst (eval), seq train type: pn_calibration }
+2022-02-03 22:15:03,407 - 0:02:04 - 0.6s - INFO - __main__ - len of test dataset: 1821
+2022-02-03 22:15:04,338 - 0:02:05 - 0.9s - INFO - __main__ - start to test { task: woz.en (load) srl (eval), seq train type: pn_calibration }
+2022-02-03 22:15:04,887 - 0:02:06 - 0.5s - INFO - __main__ - len of test dataset: 2201
+2022-02-03 22:15:12,031 - 0:02:13 - 7.1s - INFO - __main__ - start to test { task: woz.en (load) woz.en (eval), seq train type: pn_calibration }
+2022-02-03 22:15:12,514 - 0:02:13 - 0.5s - INFO - __main__ - len of test dataset: 1646
+2022-02-03 22:15:16,552 - 0:02:17 - 4.0s - INFO - __main__ - score: {'sst': OrderedDict([('em', 10.26908292147172), ('nf1', 10.26908292147172), ('nem', 10.26908292147172)]), 'srl': OrderedDict([('em', 15.174920490686054), ('nf1', 40.40809207112367), ('nem', 20.308950477055884)]), 'woz.en': OrderedDict([('em', 0.0), ('nf1', 91.40097313244341), ('nem', 81.044957472661), ('joint_goal_em', 72.66099635479951), ('turn_request_em', 90.15795868772783), ('turn_goal_em', 86.39125151883353), ('avg_dialogue', 81.40947752126367)])}
+
+Process finished with exit code 0

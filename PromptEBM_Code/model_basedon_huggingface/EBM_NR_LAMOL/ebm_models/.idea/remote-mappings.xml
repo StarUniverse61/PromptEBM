@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@sftp://dingcheng@172.19.55.32:22/home/dingcheng/dingcheng_env/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/dingcheng/workspace/baidu/ccl/ibebm" />
+              <mapping local-root="$PROJECT_DIR$/../../../ebm_calibration_nlu" remote-root="/home/dingcheng/workspace/baidu/ccl/ebm_calibration_nlu" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>
